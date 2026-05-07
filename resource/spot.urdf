@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<robot name="Spot">
+  <link name="base_link"/>
+  <joint name="front_left_shoulder_abduction" type="revolute">
+    <parent link="base_link"/><child link="fl_shoulder"/>
+    <axis xyz="1 0 0"/><limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="fl_shoulder"/>
+  <joint name="front_left_shoulder_rotation" type="revolute">
+    <parent link="fl_shoulder"/><child link="fl_upper"/>
+    <axis xyz="0 1 0"/><limit lower="-1.5" upper="1.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="fl_upper"/>
+  <joint name="front_left_elbow" type="revolute">
+    <parent link="fl_upper"/><child link="fl_lower"/>
+    <axis xyz="0 1 0"/><limit lower="-2.0" upper="2.0" effort="100" velocity="10"/>
+  </joint>
+  <link name="fl_lower"/>
+  <joint name="front_right_shoulder_abduction" type="revolute">
+    <parent link="base_link"/><child link="fr_shoulder"/>
+    <axis xyz="1 0 0"/><limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="fr_shoulder"/>
+  <joint name="front_right_shoulder_rotation" type="revolute">
+    <parent link="fr_shoulder"/><child link="fr_upper"/>
+    <axis xyz="0 1 0"/><limit lower="-1.5" upper="1.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="fr_upper"/>
+  <joint name="front_right_elbow" type="revolute">
+    <parent link="fr_upper"/><child link="fr_lower"/>
+    <axis xyz="0 1 0"/><limit lower="-2.0" upper="2.0" effort="100" velocity="10"/>
+  </joint>
+  <link name="fr_lower"/>
+  <joint name="rear_left_shoulder_abduction" type="revolute">
+    <parent link="base_link"/><child link="rl_shoulder"/>
+    <axis xyz="1 0 0"/><limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="rl_shoulder"/>
+  <joint name="rear_left_shoulder_rotation" type="revolute">
+    <parent link="rl_shoulder"/><child link="rl_upper"/>
+    <axis xyz="0 1 0"/><limit lower="-1.5" upper="1.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="rl_upper"/>
+  <joint name="rear_left_elbow" type="revolute">
+    <parent link="rl_upper"/><child link="rl_lower"/>
+    <axis xyz="0 1 0"/><limit lower="-2.0" upper="2.0" effort="100" velocity="10"/>
+  </joint>
+  <link name="rl_lower"/>
+  <joint name="rear_right_shoulder_abduction" type="revolute">
+    <parent link="base_link"/><child link="rr_shoulder"/>
+    <axis xyz="1 0 0"/><limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="rr_shoulder"/>
+  <joint name="rear_right_shoulder_rotation" type="revolute">
+    <parent link="rr_shoulder"/><child link="rr_upper"/>
+    <axis xyz="0 1 0"/><limit lower="-1.5" upper="1.5" effort="100" velocity="10"/>
+  </joint>
+  <link name="rr_upper"/>
+  <joint name="rear_right_elbow" type="revolute">
+    <parent link="rr_upper"/><child link="rr_lower"/>
+    <axis xyz="0 1 0"/><limit lower="-2.0" upper="2.0" effort="100" velocity="10"/>
+  </joint>
+  <link name="rr_lower"/>
+</robot>
